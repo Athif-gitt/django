@@ -20,5 +20,9 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    # path('', views.home),
+    # path('condition/', views.check_age),
+    # path('loop/', views.loop),
+    # path('geek/', views.ti),
+    path('new/',views.home)
 ]
