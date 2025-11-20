@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myapp import views
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', views.home),
     # path('condition/', views.check_age),
     # path('loop/', views.loop),
     # path('geek/', views.ti),
-    path('new/',views.home)
+    # path('new/',views.home)
+    # path('welcome/', views.welcome),
+    # path('square/<int:num>/', views.square)
+    path('home/', views.details)
 ]

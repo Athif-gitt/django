@@ -1,5 +1,8 @@
-from django.shortcuts import render
+# from django.shortcuts import render
+# from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.http import HttpResponse
+from django.shortcuts import render
 
 # def home(request):
 #     return HttpResponse("Hello, Django")
@@ -19,5 +22,24 @@ from django.http import HttpResponse
 #     return render(request, 'home.html', context)
 # def ti(request):
 #     return render(request, 'extendedgeeks.html')
-def home(request):
-    return render(request, 'home.html')
+# def home(request):
+#     return render(request, 'home.html')
+
+# def welcome(request):
+#     return HttpResponse("Welcome to Django")
+# def square(request, num):
+#     return render(request, 'home.html', {"number" : num * num})
+
+def details(request):
+    context = {'name': 'Athif', 'age': 22}
+    context2 = {'name': 'athif', 'price': 1500.567,
+    'msg': '<b>Welcome</b>',
+    'fruits': ['apple', 'banana', 'mango'],
+    {'age': 17},
+    }
+    return render(request, 'home.html', context2)
+    
+
+
+
+
