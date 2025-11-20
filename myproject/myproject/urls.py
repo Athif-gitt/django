@@ -26,5 +26,6 @@ urlpatterns = [
     # path('new/',views.home)
     # path('welcome/', views.welcome),
     # path('square/<int:num>/', views.square)
+    # path('home/', views.details)
     path('home/', views.details)
 ]

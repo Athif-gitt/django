@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,5 +41,22 @@
 <!-- {%for fruit in fruits%}
 {{fruit}}
 {%endfor%} -->
+
+<!-- {% if age < 18 %}
+Underaged
+{%else%}
+Aged
+{%endif%} -->
+
+
+
+    {% for num in nums %}
+        {% if num|divisibleby:"2" %}
+            <p>{{ num }}</p>
+        {% endif %}
+    {% endfor %}
+
+
+
 
 

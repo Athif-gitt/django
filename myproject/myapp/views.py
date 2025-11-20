@@ -35,7 +35,8 @@ def details(request):
     context2 = {'name': 'athif', 'price': 1500.567,
     'msg': '<b>Welcome</b>',
     'fruits': ['apple', 'banana', 'mango'],
-    {'age': 17},
+    'age': 17 ,
+    'nums': [1,2,3,4,5,6]
     }
     return render(request, 'home.html', context2)
     
