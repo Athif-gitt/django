@@ -39,6 +39,12 @@ def details(request):
     'nums': [1,2,3,4,5,6]
     }
     return render(request, 'home.html', context2)
+def hello(request):
+    return render(request, 'hello.html')
+
+def set_session(request):
+    request.session['name'] = 'Athif'
+    return HttpResponse("session created")
     
 
 

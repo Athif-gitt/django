@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block content %}
+<a href="{% url 'hello'%}">Click Here</a>
+{% endblock %}
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,12 +53,12 @@ Aged
 
 
 
-    {% for num in nums %}
+    <!-- {% for num in nums %}
         {% if num|divisibleby:"2" %}
             <p>{{ num }}</p>
         {% endif %}
-    {% endfor %}
-
+    {% endfor %} -->
+    
 
 
 

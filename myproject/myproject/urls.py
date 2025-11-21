@@ -27,5 +27,7 @@ urlpatterns = [
     # path('welcome/', views.welcome),
     # path('square/<int:num>/', views.square)
     # path('home/', views.details)
-    path('home/', views.details)
+    path('home/', views.details, name = 'home'),
+    path('hello/', views.hello, name = 'hello'),
+    path('session/', views.set_session)
 ]
