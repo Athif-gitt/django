@@ -45,6 +45,20 @@ def hello(request):
 def set_session(request):
     request.session['name'] = 'Athif'
     return HttpResponse("session created")
+
+def forms(request):
+    request.session['name'] = 'Athif'
+    name = None
+    if request.method == 'POST':
+        name = request.POST.get('name')
+    return render(request, 'forms.html', {'message': name})
+
+def response(request):
+    request.session['name'] = "Athif"
+    session = request.session.get('name')
+    # del request.session['name']
+    # return HttpResponse(session)
+    return HttpResponse(session)
     
 
 

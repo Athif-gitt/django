@@ -1,0 +1,13 @@
+<h1>Forms</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="name">
+    <input type="submit" value="OK">
+</form>
+
+{% if message == 'Athif' %}
+    {{ message }}
+{% else %}
+    <p>Not matched</p>
+{% endif %}
