@@ -1,4 +1,4 @@
-<h1>Forms</h1>
+{% comment %} <h1>Forms</h1>
 
 <form method="POST">
     {% csrf_token %}
@@ -10,4 +10,10 @@
     {{ message }}
 {% else %}
     <p>Not matched</p>
-{% endif %}
+{% endif %} {% endcomment %}
+
+<form action="" method='post'>
+    {% csrf_token %}
+    {{ message.as_p }}
+    <input type="submit" value='Ok'> </input>
+</form>

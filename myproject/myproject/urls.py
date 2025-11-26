@@ -30,6 +30,9 @@ urlpatterns = [
     # path('home/', views.details, name = 'home'),
     # path('hello/', views.hello, name = 'hello'),
     # path('session/', views.set_session)
-    path('forms/', views.forms),
-    path('response/', views.response),
+    # path('forms/', views.forms),
+    # path('response/', views.response),
+    path('link/', views.link),
+    path('hello/', views.hello, name='hello'),
+    path('forms/', views.form, name='form'),
 ]

@@ -2,7 +2,8 @@
 # from django.http import HttpResponse
 # from django.http import HttpResponse
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import StudentForm
 
 # def home(request):
 #     return HttpResponse("Hello, Django")
@@ -46,12 +47,12 @@ def set_session(request):
     request.session['name'] = 'Athif'
     return HttpResponse("session created")
 
-def forms(request):
-    request.session['name'] = 'Athif'
-    name = None
-    if request.method == 'POST':
-        name = request.POST.get('name')
-    return render(request, 'forms.html', {'message': name})
+# def forms(request):
+#     request.session['name'] = 'Athif'
+#     name = None
+#     if request.method == 'POST':
+#         name = request.POST.get('name')
+#     return render(request, 'forms.html', {'message': name})
 
 def response(request):
     request.session['name'] = "Athif"
@@ -60,6 +61,28 @@ def response(request):
     # return HttpResponse(session)
     return HttpResponse(session)
     
+def hello(request):
+    return render(request, 'hello.html')
+
+def link(request):
+    return render(request, 'link.html')
+
+def form(request):
+    form = StudentForm()
+    if request.method == 'POST':
+        form = StudentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request,'hello.html',{'name':name})
+
+    else:
+        form = StudentForm
+    name = request.POST.get('name')
+
+    return render(request, 'forms.html', {'message': form, 'name': name})
+
+    
+
 
 
 
