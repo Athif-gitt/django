@@ -54,6 +54,7 @@ def set_session(request):
 #         name = request.POST.get('name')
 #     return render(request, 'forms.html', {'message': name})
 
+
 def response(request):
     request.session['name'] = "Athif"
     session = request.session.get('name')
