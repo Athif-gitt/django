@@ -50,6 +50,7 @@ def set_session(request):
 # def forms(request):
 #     request.session['name'] = 'Athif'
 #     name = None
+
 #         name = request.POST.get('name')
 #     return render(request, 'forms.html', {'message': name})
 
