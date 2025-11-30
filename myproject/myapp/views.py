@@ -60,6 +60,10 @@ def response(request):
     session = request.session.get('name')
     # del request.session['name']
     
+
+
+
+    
     # return HttpResponse(session)
     return HttpResponse(session)
     
