@@ -64,6 +64,9 @@ def response(request):
 
 
     
+
+
+    
     # return HttpResponse(session)
     return HttpResponse(session)
     
