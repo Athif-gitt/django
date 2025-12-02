@@ -59,16 +59,10 @@ def response(request):
     request.session['name'] = "Athif"
     session = request.session.get('name')
     # del request.session['name']
-    
-
-
-
-    
-
-
-    
     # return HttpResponse(session)
     return HttpResponse(session)
+    
+
     
 def hello(request):
     return render(request, 'hello.html')
